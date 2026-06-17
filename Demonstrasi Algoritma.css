@@ -1,0 +1,186 @@
+/* styles.css
+   Simple, natural & elegant styling for "Tugas Infor" demo page
+   Designed to look clean and like produced by someone new to CSS
+*/
+
+:root {
+  --bg: #f7f6f3;
+  --card: #ffffff;
+  --muted: #6b6b6b;
+  --accent: #2b6cb0;
+  --accent-2: #7bb3e6;
+  --success: #2f855a;
+  --glass: rgba(43, 108, 176, 0.08);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  background: linear-gradient(180deg, var(--bg), #eef3f8 60%);
+  color: #222;
+  font-size: 16px;
+  line-height: 1.4;
+  padding: 32px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
+  padding: 28px;
+}
+
+h1 {
+  margin: 0 0 18px 0;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-wrapper {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.section {
+  flex: 1;
+  min-width: 280px;
+}
+.section h2 {
+  font-size: 18px;
+  margin: 0 0 12px 0;
+  color: var(--accent);
+}
+
+.algorithm {
+  background: var(--glass);
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+.algorithm h3 {
+  margin: 0 0 6px 0;
+  font-size: 15px;
+}
+.algorithm-desc {
+  margin: 0 0 6px 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+.complexity {
+  margin: 0 0 8px 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+button {
+  background: var(--accent);
+  color: white;
+  border: 0;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+}
+button:hover {
+  background: var(--accent-2);
+}
+
+.demo-section {
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px dashed #e6e6e6;
+}
+.demo-controls {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+input[type="number"],
+input[type="text"] {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  background: white;
+}
+
+.array-visualization {
+  min-height: 90px;
+  background: linear-gradient(180deg, #ffffff, #fbfdff);
+  border-radius: 10px;
+  padding: 12px;
+  border: 1px solid #f0f4f8;
+  display: flex;
+  gap: 6px;
+  align-items: end;
+}
+.array-visualization .bar {
+  background: var(--accent);
+  height: 40px;
+  width: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+}
+
+.result {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  background: #f9fafb;
+  border: 1px solid #eef2f7;
+  color: var(--muted);
+}
+
+/* small screens */
+@media (max-width: 700px) {
+  .container {
+    padding: 18px;
+  }
+  h1 {
+    font-size: 18px;
+  }
+  .section-wrapper {
+    flex-direction: column;
+  }
+}
+
+/* beginner-friendly subtle focus */
+button:focus,
+input:focus {
+  outline: 2px solid rgba(43, 108, 176, 0.15);
+  outline-offset: 2px;
+}
+
+/* little helper classes used by JS demos */
+.bar.highlight {
+  background: var(--success);
+}
+.note {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* Copyright Info */
+.container + div p {
+  margin-top: 18px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 1000px;
+}

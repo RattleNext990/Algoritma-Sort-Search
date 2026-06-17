@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Algoritma Sort & Search</title>
+    <link rel="stylesheet" href="Demonstrasi Algoritma.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Demonstrasi Algoritma Sort & Search 📊</h1>
+
+      <div class="section-wrapper">
+        <!-- SORTING ALGORITHMS -->
+        <div class="section">
+          <h2>Sorting Algorithms</h2>
+
+          <div class="algorithm">
+            <h3>Bubble Sort</h3>
+            <p class="algorithm-desc">
+              Membandingkan elemen yang berdekatan secara berulang
+            </p>
+            <p class="complexity">⏱️ Time: O(n²) | Space: O(1)</p>
+            <button onclick="runSort('bubble')">Demo</button>
+          </div>
+
+          <div class="algorithm">
+            <h3>Selection Sort</h3>
+            <p class="algorithm-desc">
+              Memilih elemen terkecil dan ditempatkan di depan
+            </p>
+            <p class="complexity">⏱️ Time: O(n²) | Space: O(1)</p>
+            <button onclick="runSort('selection')">Demo</button>
+          </div>
+
+          <div class="algorithm">
+            <h3>Insertion Sort</h3>
+            <p class="algorithm-desc">
+              Menyisipkan elemen ke posisi yang tepat
+            </p>
+            <p class="complexity">⏱️ Time: O(n²) | Space: O(1)</p>
+            <button onclick="runSort('insertion')">Demo</button>
+          </div>
+
+          <div class="algorithm">
+            <h3>Merge Sort</h3>
+            <p class="algorithm-desc">
+              Membagi array dan menggabungkan dengan terurut
+            </p>
+            <p class="complexity">⏱️ Time: O(n log n) | Space: O(n)</p>
+            <button onclick="runSort('merge')">Demo</button>
+          </div>
+
+          <div class="algorithm">
+            <h3>Quick Sort</h3>
+            <p class="algorithm-desc">Membagi berdasarkan pivot dan rekursi</p>
+            <p class="complexity">⏱️ Time: O(n log n) avg | Space: O(log n)</p>
+            <button onclick="runSort('quick')">Demo</button>
+          </div>
+        </div>
+
+        <!-- SEARCHING ALGORITHMS -->
+        <div class="section">
+          <h2>Searching Algorithms</h2>
+
+          <div class="algorithm">
+            <h3>Linear Search</h3>
+            <p class="algorithm-desc">
+              Mencari elemen dengan pemeriksaan satu per satu
+            </p>
+            <p class="complexity">⏱️ Time: O(n) | Space: O(1)</p>
+            <button onclick="runSearch('linear')">Demo</button>
+          </div>
+
+          <div class="algorithm">
+            <h3>Binary Search</h3>
+            <p class="algorithm-desc">
+              Mencari di array terurut dengan membagi dua
+            </p>
+            <p class="complexity">⏱️ Time: O(log n) | Space: O(1)</p>
+            <button onclick="runSearch('binary')">Demo</button>
+          </div>
+
+          <div class="algorithm">
+            <h3>Interpolation Search</h3>
+            <p class="algorithm-desc">
+              Memperkirakan posisi elemen berdasarkan nilai
+            </p>
+            <p class="complexity">⏱️ Time: O(log log n) avg | Space: O(1)</p>
+            <button onclick="runSearch('interpolation')">Demo</button>
+          </div>
+
+          <div class="algorithm">
+            <h3>Jump Search</h3>
+            <p class="algorithm-desc">
+              Melompat dengan interval tetap lalu linear search
+            </p>
+            <p class="complexity">⏱️ Time: O(√n) | Space: O(1)</p>
+            <button onclick="runSearch('jump')">Demo</button>
+          </div>
+
+          <div class="algorithm">
+            <h3>Exponential Search</h3>
+            <p class="algorithm-desc">
+              Mencari range eksponensial lalu binary search
+            </p>
+            <p class="complexity">⏱️ Time: O(log n) | Space: O(1)</p>
+            <button onclick="runSearch('exponential')">Demo</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- INTERACTIVE DEMO SECTION -->
+      <div class="demo-section">
+        <h2>🎮 Demo Interaktif</h2>
+
+        <div class="demo-controls">
+          <input
+            type="number"
+            id="arraySize"
+            placeholder="Ukuran Array (5-20)"
+            min="5"
+            max="20"
+            value="10"
+          />
+          <button onclick="generateArray()">Generate Array</button>
+          <input
+            type="number"
+            id="searchValue"
+            placeholder="Cari nilai..."
+            style="width: 150px"
+          />
+          <button onclick="demonstrateSearch()">Cari</button>
+          <button onclick="demonstrateSort()">Urutkan</button>
+          <button onclick="resetDemo()">Reset</button>
+        </div>
+
+        <div class="array-visualization" id="arrayViz"></div>
+
+        <div class="result" id="resultBox">
+          <p>Klik tombol untuk memulai demonstrasi...</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <p>
+        @kautsrghanzz copyright reserve - Juni 2026 | Free to print, share,
+        modify for group use
+      </p>
+    </div>
+    <script src="Demonstrasi Algoritma.js"></script>
+  </body>
+</html>
